@@ -7,11 +7,11 @@ import {
   Storefront,
   AttachMoney,
   BarChart,
-  MailOutline,
+  /* MailOutline,
   DynamicFeed,
   ChatBubbleOutline,
   WorkOutline,
-  Report,
+  Report, */
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
@@ -39,7 +39,7 @@ export default function Sidebar() {
           </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Quick Menu</h3>
+          <h3 className="sidebarTitle">Transaction</h3>
           <ul className="sidebarList">
             <Link to="/users" className="link">
               <li className="sidebarListItem">
@@ -55,7 +55,7 @@ export default function Sidebar() {
             </Link>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
-              Transactions
+              Orders
             </li>
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
@@ -63,7 +63,7 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
-        <div className="sidebarMenu">
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
@@ -79,8 +79,8 @@ export default function Sidebar() {
               Messages
             </li>
           </ul>
-        </div>
-        <div className="sidebarMenu">
+        </div> */}
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Staff</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
@@ -96,7 +96,7 @@ export default function Sidebar() {
               Reports
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
