@@ -5,8 +5,8 @@ import Avatar from '@material-ui/core/Avatar';
 import TextField from '@material-ui/core/TextField';
 
 
-const Forgot_Password=()=>{
-    const paperStyle={padding : 20,height: '70vh', width:280, margin:"20px auto"}    
+const Forgot_Password=({handleChange})=>{
+    const paperStyle={padding : 20,height: '70vh', width:300, margin:"20px auto"}    
     const avatarStyle={justifyContent: 'center', display: 'flex'}
     const buttonStyle={margin: '1em auto', display: 'flex', justifyContent: 'center' }          
                         
@@ -22,7 +22,7 @@ const Forgot_Password=()=>{
                 <TextField id="email" label="Email" placeholder="Enter Email" fullWidth required />                         
                 <Button type="submit" color="primary" variant="contained" fullWidth style={buttonStyle}>Submit</Button>                
                 <Typography align="center">
-                    <Link to="/" className="text-black-50">
+                    <Link to="/" onClick={()=>handleChange("event",0)} className="text-black-50">
                         Back To Login
                     </Link>
                 </Typography>

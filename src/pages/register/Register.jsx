@@ -11,7 +11,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 
  
 
-const Register=()=>{
+const Register=({handleChange})=>{
     const paperStyle={padding : 20,height: '80vh', width:300, margin:"20px auto"}    
     const avatarStyle={justifyContent: 'center', display: 'flex'}
     //const checboxStyle={margin:"20px auto"}
@@ -49,7 +49,7 @@ const Register=()=>{
                 <Button type="submit" color="primary" variant="contained" fullWidth >Sign Up</Button> 
                 <Divider variant="middle" />
                     <Typography align="center">
-                        <Link to="/" className="text-black-50">
+                        <Link to="/" onClick={()=>handleChange("event",0)} className="text-black-50">
                             Already Have an Account 
                         </Link>
                     </Typography>

@@ -6,8 +6,8 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 
-const Login=()=>{
-    const paperStyle={padding : 20,height: '70vh', width:280, margin:"20px auto"}    
+const Login=({handleChange})=>{
+    const paperStyle={padding : 20,height: '70vh', width:300, margin:"20px auto"}    
     const avatarStyle={justifyContent: 'center', display: 'flex'}
     const marginTop={marginTop: 5}
     const buttonStyle={margin: '1em auto', display: 'flex', justifyContent: 'center' }   
@@ -34,13 +34,13 @@ const Login=()=>{
                 />
                 <Button type="submit" color="primary" variant="contained" fullWidth style={buttonStyle} >Sign In</Button>
                 <Typography align="center">
-                    <Link to="forgotpassword" className="text-black-50">
+                    <Link to="forgotpassword" onClick={()=>handleChange("event",2)} className="text-black-50">
                         Forgot Password ?
                     </Link>
                 </Typography>
                 <Typography variant='caption'>
                 Do you have an account ?
-                    <Link to="register" className="text-black-50">
+                    <Link to="register" onClick={()=>handleChange("event",1)} className="text-black-50">
                         Sign Up ?
                     </Link>
                 </Typography>
